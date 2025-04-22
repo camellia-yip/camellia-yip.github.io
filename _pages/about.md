@@ -17,9 +17,18 @@ redirect_from:
 
 <span class='anchor' id='about-me'></span>
 
+
+
+
+
 I pursued my undergraduate degree in Computer Science at Nanjing University of Science and Technology. During my studies, I joined the NIMG Lab, where I conducted research in Computational Neuroscience under the guidance of Professor [Ye Wu](https://dryewu.github.io). Ever since I set foot in university, one question has quietly accompanied me: how might we make life more meaningful & more joyful—for everyone? 🤔
 
 My research interests lie in cognitive neuroscience, with a particular focus on the neural mechanisms underlying depression, ADHD, and anxiety disorders. During my graduate studies, I look forward to harnessing AI for health to tackle more practical, tangible challenges, with the ultimate aim of helping more people feel better.
+
+
+
+
+
 
 
 
