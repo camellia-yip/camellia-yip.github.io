@@ -1,0 +1,132 @@
+---
+layout: connectomic-GPT
+permalink: /projects/connectomic-cluster/
+title: "Detailed connectomic cluster resource for white matter mapping from ultra-high-field diffusion MRI"
+description: "A fine-grained white matter atlas built from 171 HCP 7T scans, with 33,256 and 65,184 fiber clusters under two cortical network schemes."
+---
+<!-- Project page written by GPT (Codex), 2026-11-14. All figures and results are from the published paper. -->
+<div class="project-shell">
+  <section class="hero" aria-labelledby="project-title">
+    <p class="eyebrow">NeuroImage <span>2026</span> Open access</p>
+    <h1 id="project-title">Detailed connectomic cluster resource <span>for white matter mapping from ultra-high-field diffusion MRI</span></h1>
+    <p class="authors"><strong>Hiuying Yip<sup>*</sup></strong>, Yifei He<sup>*</sup>, Yu Xie, Fan Zhang, Ye Wu</p>
+    <p class="affiliations">Nanjing University of Science and Technology · University of Electronic Science and Technology of China</p>
+    <p class="equal-contribution"><sup>*</sup> Equal contribution</p>
+    <p class="hero-summary">A data-driven atlas of the brain's white matter: fine-grained fiber clusters organized by the cortical networks and subcortical regions they connect.</p>
+    <div class="resource-links" aria-label="Project resources">
+      <a class="button primary" href="https://doi.org/10.1016/j.neuroimage.2026.121704" target="_blank" rel="noopener">Read the paper <span aria-hidden="true">↗</span></a>
+      <a class="button" href="https://github.com/mushroomer1823/connectomic_cluster" target="_blank" rel="noopener">Code <span aria-hidden="true">↗</span></a>
+      <a class="button" href="https://doi.org/10.57760/sciencedb.28989" target="_blank" rel="noopener">Dataset <span aria-hidden="true">↗</span></a>
+      <a class="button" href="#citation">Cite this work</a>
+    </div>
+    <dl class="key-numbers">
+      <div><dt>171</dt><dd>HCP participants</dd></div>
+      <div><dt>7T</dt><dd>Diffusion MRI</dd></div>
+      <div><dt>33,256</dt><dd>Clusters · 7-network scheme</dd></div>
+      <div><dt>65,184</dt><dd>Clusters · 17-network scheme</dd></div>
+    </dl>
+  </section>
+
+  <figure class="paper-figure hero-figure">
+    <a href="{{ '/images/connectomic-cluster/figure-3-atlas.webp' | relative_url }}" target="_blank" rel="noopener" aria-label="Open Figure 3 at full resolution">
+      <img src="{{ '/images/connectomic-cluster/figure-3-atlas.webp' | relative_url }}" width="1255" height="995" alt="A matrix of reconstructed white matter fiber clusters connecting seven cortical networks and nine subcortical regions, with cluster counts below the diagonal." fetchpriority="high">
+    </a>
+    <figcaption><span>Fig. 3 · The atlas at a glance</span> Representative tractography renderings show connections between seven cortical networks and nine subcortical regions. Numbers below the diagonal give the cluster count for each region pair. Open any figure to view it at full resolution.</figcaption>
+  </figure>
+
+  <nav class="section-nav" aria-label="On this page">
+    <a href="#overview">Overview</a><a href="#method">Method</a><a href="#results">Results</a><a href="#resources">Resources</a>
+  </nav>
+
+  <section class="content-section" id="overview" aria-labelledby="overview-title">
+    <p class="section-label">01 / Overview</p>
+    <h2 id="overview-title">From familiar bundles to finer connections</h2>
+    <div class="two-columns">
+      <div>
+        <p>White matter connects distributed regions of the brain. Major anatomical bundles are well studied, while smaller pathways and the fine structure within those bundles remain harder to characterize.</p>
+        <p>We construct a whole-brain fiber-cluster resource from high-resolution diffusion MRI. Streamlines are grouped using their geometry and the regions they connect, allowing established bundles and finer subdivisions to be examined in the same atlas.</p>
+      </div>
+      <ul class="contribution-list">
+        <li><strong>Fine-grained organization.</strong> Two atlas versions use 7 or 17 cortical functional networks, each combined with nine subcortical regions.</li>
+        <li><strong>Complementary reconstructions.</strong> Probabilistic and deterministic tractography are combined before clustering.</li>
+        <li><strong>Population and individual views.</strong> Corresponding clusters are examined at the group level and within individual participants.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="content-section" id="method" aria-labelledby="method-title">
+    <p class="section-label">02 / Method</p>
+    <h2 id="method-title">From diffusion MRI to a fiber-cluster atlas</h2>
+    <p class="section-intro">The pipeline combines multiple tractography methods, a compact representation of streamline geometry, and filtering at both population and individual levels.</p>
+    <figure class="paper-figure">
+      <a href="{{ '/images/connectomic-cluster/figure-1-pipeline.webp' | relative_url }}" target="_blank" rel="noopener" aria-label="Open Figure 1 at full resolution">
+        <img src="{{ '/images/connectomic-cluster/figure-1-pipeline.webp' | relative_url }}" width="1755" height="1153" alt="The published pipeline: MRI preprocessing, deterministic and probabilistic tractography, MNI152 alignment, region-pair grouping, cosine representation, clustering and filtering." loading="lazy">
+      </a>
+      <figcaption><span>Fig. 1 · Construction pipeline</span> Individual reconstructions are aligned and aggregated, organized by connected regions, and clustered to build the population atlas.</figcaption>
+    </figure>
+    <ol class="method-steps">
+      <li><span>01</span><h3>Reconstruct</h3><p>Estimate multi-tissue fiber orientation distributions and generate streamlines with iFOD1, iFOD2 and SD_STREAM. Align the reconstructions to MNI152 space.</p></li>
+      <li><span>02</span><h3>Represent &amp; cluster</h3><p>Group streamlines by their connected regions. Encode their positions and shapes with cosine-series coefficients, then apply k-means clustering.</p></li>
+      <li><span>03</span><h3>Filter &amp; compare</h3><p>Remove outlying streamlines at group and individual levels. Compare the resulting clusters across participants and with the population atlas.</p></li>
+    </ol>
+  </section>
+
+  <section class="content-section" id="results" aria-labelledby="results-title">
+    <p class="section-label">03 / Results</p>
+    <h2 id="results-title">What the finer scale reveals</h2>
+    <p class="section-intro">The atlas contains 33,256 clusters under the 7-network scheme and 65,184 under the 17-network scheme, spanning deep and superficial white matter.</p>
+    <h3 class="result-title">Multiple clusters within a classical tract</h3>
+    <p>The arcuate fasciculus (AF) and corticospinal tract (CST) can each be decomposed into distinct fiber clusters. The examples below illustrate differences in trajectory within these familiar bundles, alongside corresponding clusters in individual participants.</p>
+    <figure class="paper-figure">
+      <a href="{{ '/images/connectomic-cluster/figure-5-subclusters.webp' | relative_url }}" target="_blank" rel="noopener" aria-label="Open Figure 5 at full resolution">
+        <img src="{{ '/images/connectomic-cluster/figure-5-subclusters.webp' | relative_url }}" width="1755" height="873" alt="Figure 5: cluster geometry in length-span-volume space, example subdivisions of the arcuate fasciculus and corticospinal tract, and matching clusters in eight participants." loading="lazy">
+      </a>
+      <figcaption><span>Fig. 5 · Geometry, subdivisions and individual correspondence</span> (a) Cluster distributions in length, span and volume. (b) Randomly selected subclusters within AF and CST. (c) Population clusters and corresponding examples from individual participants.</figcaption>
+    </figure>
+
+    <div class="consistency-result">
+      <div>
+        <h3>Correspondence across participants</h3>
+        <p>The paper measures overlap between individual tractography and the population representation. Figure 6 shows the observed spread across subjects, with the distribution concentrated around 98% overlap.</p>
+        <p>This is a within-cohort consistency assessment: it describes how individual reconstructions correspond to the atlas built from this HCP dataset.</p>
+        <aside class="scope-note"><h4>Interpreting the atlas</h4><p>Streamlines are trajectories reconstructed from diffusion MRI. Tractography uncertainty remains, and the construction cohort consists of young, healthy participants. Application to other populations or acquisition pipelines requires further validation.</p></aside>
+      </div>
+      <figure class="paper-figure consistency-figure">
+        <a href="{{ '/images/connectomic-cluster/figure-6-consistency.webp' | relative_url }}" target="_blank" rel="noopener" aria-label="Open Figure 6 at full resolution">
+          <img src="{{ '/images/connectomic-cluster/figure-6-consistency.webp' | relative_url }}" width="1155" height="1462" alt="The published overlap similarity distribution across subjects, including individual points, a box plot and a density curve." loading="lazy">
+        </a>
+        <figcaption><span>Fig. 6 · Individual-to-population overlap</span> The original plot preserves the full distribution across participants.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="content-section" id="resources" aria-labelledby="resources-title">
+    <p class="section-label">04 / Resources</p>
+    <h2 id="resources-title">Read, explore and build on the resource</h2>
+    <div class="resource-grid">
+      <a class="resource-card" href="https://doi.org/10.1016/j.neuroimage.2026.121704" target="_blank" rel="noopener"><span>01 / Publication</span><h3>Read the full study <span aria-hidden="true">↗</span></h3><p>Methods, evaluation, supplementary material and discussion in NeuroImage.</p></a>
+      <a class="resource-card" href="https://doi.org/10.57760/sciencedb.28989" target="_blank" rel="noopener"><span>02 / Data</span><h3>ScienceDB dataset <span aria-hidden="true">↗</span></h3><p>The released resource supports the 7- and 17-network schemes, with data in standard neuroimaging formats.</p></a>
+      <a class="resource-card" href="https://github.com/mushroomer1823/connectomic_cluster" target="_blank" rel="noopener"><span>03 / Code</span><h3>Analysis pipeline <span aria-hidden="true">↗</span></h3><p>Scripts for data processing, tractography, clustering, evaluation and visualization.</p></a>
+    </div>
+    <p class="data-note">As noted in the paper, subject-level fiber clusters are available from the corresponding author on request.</p>
+  </section>
+
+  <section class="content-section citation-section" id="citation" aria-labelledby="citation-title">
+    <p class="section-label">Citation</p>
+    <h2 id="citation-title">Cite this work</h2>
+    <p>Yip, H., He, Y., Xie, Y., Zhang, F., &amp; Wu, Y. (2026). Detailed connectomic cluster resource for white matter mapping from ultra-high-field diffusion MRI. <em>NeuroImage, 326</em>, 121704.</p>
+    <details>
+      <summary>BibTeX</summary>
+      <pre><code>@article{yip2026connectomic,
+  title = {Detailed connectomic cluster resource for white matter mapping from ultra-high-field diffusion MRI},
+  author = {Yip, Hiuying and He, Yifei and Xie, Yu and Zhang, Fan and Wu, Ye},
+  journal = {NeuroImage},
+  volume = {326},
+  pages = {121704},
+  year = {2026},
+  doi = {10.1016/j.neuroimage.2026.121704}
+}</code></pre>
+    </details>
+    <a class="citation-download" href="{{ '/files/connectomic-cluster/citation-GPT.bib' | relative_url }}" download>Download citation (.bib)</a>
+  </section>
+</div>

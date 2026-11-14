@@ -1,0 +1,36 @@
+<!doctype html>
+<!-- Project layout by GPT (Codex), 2026-11-14. -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ page.title | escape }} | {{ site.title | escape }}</title>
+  <meta name="description" content="{{ page.description | escape }}">
+  <link rel="canonical" href="{{ page.url | absolute_url }}">
+  <meta property="og:title" content="{{ page.title | escape }}">
+  <meta property="og:description" content="{{ page.description | escape }}">
+  <meta property="og:type" content="article">
+  <meta property="og:image" content="{{ '/images/connectomic-cluster/figure-3-atlas.webp' | absolute_url }}">
+  <link rel="icon" href="{{ '/images/favicon-32x32.png' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/connectomic-project-GPT.css' | relative_url }}">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="site-name" href="{{ '/' | relative_url }}">Hiuying Yip<span>Research</span></a>
+      <nav aria-label="Main navigation">
+        <a href="{{ '/' | relative_url }}">About</a>
+        <a href="{{ '/publications/' | relative_url }}" aria-current="page">Publications</a>
+        <a href="{{ '/news/' | relative_url }}">News</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main">{{ content }}</main>
+  <footer class="site-footer">
+    <p>Figures 1, 3, 5 and 6 reproduced without content changes from Yip et al., <a href="https://doi.org/10.1016/j.neuroimage.2026.121704">NeuroImage 326 (2026), 121704</a>.</p>
+    <p>© 2026 The Authors. Figures licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>.</p>
+    <a href="{{ '/publications/' | relative_url }}">Back to all publications</a>
+  </footer>
+</body>
+</html>
