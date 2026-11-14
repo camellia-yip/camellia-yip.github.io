@@ -19,12 +19,12 @@ google_site_verification :  # get google_site_verification from https://search.g
 bing_site_verification   :  # get bing_site_verification from https://www.bing.com/webmasters/about
 baidu_site_verification  :  # get baidu_site_verification from https://ziyuan.baidu.com/login/index?u=/site/index
 
-# Site Author
+# Site Author (profile updated by GPT / Codex, 2026-11-14)
 author:
   name             : "Hiuying Yip"
   avatar           : "images/mephoto.png"
-  bio              : "Tsinghua univerisity"
-  location         : "Shenzhen, China"
+  bio              : "Tsinghua University<br>Université Paris Cité / LPI"
+  location         : "Paris, France"
   employer         :
   pubmed           : 
   googlescholar    :
