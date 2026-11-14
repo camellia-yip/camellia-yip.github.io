@@ -21,9 +21,12 @@ redirect_from:
 
 
 
-I pursued my undergraduate degree in Computer Science at Nanjing University of Science and Technology. During my studies, I joined the NIMG Lab, where I conducted research in Computational Neuroscience under the guidance of Professor [Ye Wu](https://dryewu.github.io). Ever since I set foot in university, one question has quietly accompanied me: how might we make life more meaningful & more joyful—for everyone? 🤔
+<!-- Biography written by GPT (Codex), approved by the site owner, 2026-11-14. -->
+I am interested in **representation learning and world action models (WAMs)**: how agents learn internal representations of the world, predict the consequences of their actions, and use those predictions to plan. My current work explores JEPA-based models, with a focus on learning through interaction and understanding what makes learned representations useful for action.
 
-My research interests lie in cognitive neuroscience, with a particular focus on the neural mechanisms underlying depression, ADHD, and anxiety disorders. During my graduate studies, I look forward to harnessing AI for health to tackle more practical, tangible challenges, with the ultimate aim of helping more people feel better.
+My path into machine learning grew out of research in neuroscience, where I used brain imaging to study brain organization, cognition, and behavior. That experience sparked my curiosity about how intelligent systems organize experience into internal representations. It also shaped how I approach research: using measurements, probes, and interventions to investigate mechanisms that we cannot directly observe.
+
+What excites me most is the opportunity to **build intelligent capabilities and study how they emerge**. I want to understand what information a model retains, how its representations change through learning, and how those representations support behavior. Neuroscience continues to inform the questions I ask as I explore these problems in artificial systems.
 
 
 
