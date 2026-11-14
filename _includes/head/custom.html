@@ -8,6 +8,9 @@
 <meta name="msapplication-config" content="{{ '/images/browserconfig.xml' | relative_url }}?v=M44lzPylqQ">
 <meta name="theme-color" content="#ffffff">
 <link rel="stylesheet" href="{{ '/assets/css/academicons.css' | relative_url }}"/>
+{% if page.extra_css %}
+<link rel="stylesheet" href="{{ page.extra_css | relative_url }}?v={{ site.github.build_revision | default: '20261114' }}">
+{% endif %}
 
 <script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: { autoNumber: "all" } } }); </script>
 <script type="text/x-mathjax-config">
