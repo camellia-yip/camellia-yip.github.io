@@ -43,6 +43,7 @@ sup { font-size: .7em; }
 .paper-figure figcaption { margin: 13px 0 0; color: var(--muted); font-size: 13px; line-height: 1.65; }
 .paper-figure figcaption span { color: var(--ink); font-weight: 650; display: block; margin-bottom: 3px; }
 .hero-figure { max-width: 850px; margin: 32px auto 45px; }
+.source-width { max-width: 740px; margin-left: auto; margin-right: auto; }
 .section-nav { display: flex; justify-content: center; flex-wrap: wrap; gap: 18px 40px; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 14px 0; }
 .section-nav a { display: inline-flex; align-items: center; min-height: 36px; font-size: 14px; text-decoration: none; font-weight: 550; }
 .section-nav a:hover { text-decoration: underline; }

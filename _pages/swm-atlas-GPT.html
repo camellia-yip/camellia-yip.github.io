@@ -1,0 +1,110 @@
+---
+layout: connectomic-GPT
+permalink: /projects/swm-atlas/
+title: "A high-resolution functional network-organized atlas of human superficial white matter from ultra-high-field diffusion MRI"
+description: "A superficial white matter atlas from HCP 7T diffusion MRI, with 643 and 1,403 clusters organized by cortical functional networks."
+project_image: /images/swm-atlas/figure-2-atlas.webp
+figure_numbers: "Figures 1, 2, 3 and 5"
+paper_authors: "He et al."
+paper_doi: "https://doi.org/10.1016/j.isci.2026.116671"
+paper_reference: "iScience 29(7) (2026), 116671"
+copyright_year: 2026
+---
+<!-- Project page by GPT (Codex), 2026-11-14. Figures and findings are from the published article. -->
+<div class="project-shell">
+  <section class="hero" aria-labelledby="project-title">
+    <p class="eyebrow">iScience <span>2026</span> Open access</p>
+    <h1 id="project-title">A high-resolution functional network-organized atlas <span>of human superficial white matter from ultra-high-field diffusion MRI</span></h1>
+    <p class="authors">Yifei He, Yu Xie, <strong>Hiuying Yip</strong>, Yoonmi Hong, Ye Wu</p>
+    <p class="affiliations">Nanjing University of Science and Technology · Tsinghua University · University of North Carolina at Chapel Hill</p>
+    <p class="hero-summary">Mapping the short-range white matter pathways near the cortex, with fine-grained clusters and annotations connecting their structure to functional brain networks.</p>
+    <div class="resource-links" aria-label="Project resources">
+      <a class="button primary" href="https://doi.org/10.1016/j.isci.2026.116671" target="_blank" rel="noopener">Read the paper <span aria-hidden="true">↗</span></a>
+      <a class="button" href="https://github.com/mushroomer1823/swm_atlas" target="_blank" rel="noopener">Code <span aria-hidden="true">↗</span></a>
+      <a class="button" href="https://doi.org/10.57760/sciencedb.28793" target="_blank" rel="noopener">Dataset <span aria-hidden="true">↗</span></a>
+      <a class="button" href="#citation">Cite this work</a>
+    </div>
+    <dl class="key-numbers">
+      <div><dt>171</dt><dd>HCP participants</dd></div>
+      <div><dt>7T</dt><dd>Diffusion MRI</dd></div>
+      <div><dt>643</dt><dd>SWM clusters · Yeo 7</dd></div>
+      <div><dt>1,403</dt><dd>SWM clusters · Yeo 17</dd></div>
+    </dl>
+  </section>
+  <figure class="paper-figure hero-figure source-width">
+    <a href="{{ '/images/swm-atlas/figure-2-atlas.webp' | relative_url }}" target="_blank" rel="noopener" aria-label="Open Figure 2">
+      <img src="{{ '/images/swm-atlas/figure-2-atlas.webp' | relative_url }}" width="738" height="374" alt="Superficial white matter clusters grouped by the cortical networks they connect, with Yeo 7 on the left and Yeo 17 on the right, alongside circular connectivity diagrams." fetchpriority="high">
+    </a>
+    <figcaption><span>Fig. 2 · Two views of superficial white matter</span> The atlas is organized under 7- and 17-network parcellations. Network-pair views, whole-brain renderings and circular diagrams summarize the reconstructed connections. Figures open at their source resolution.</figcaption>
+  </figure>
+  <nav class="section-nav" aria-label="On this page"><a href="#overview">Overview</a><a href="#method">Method</a><a href="#results">Results</a><a href="#resources">Resources</a></nav>
+
+  <section class="content-section" id="overview" aria-labelledby="overview-title">
+    <p class="section-label">01 / Overview</p>
+    <h2 id="overview-title">A closer look beneath the cortical surface</h2>
+    <div class="two-columns">
+      <div><p>Superficial white matter (SWM) supports communication between nearby cortical regions. Its short, curved trajectories and location near the gray-white matter boundary make it difficult to reconstruct and organize consistently.</p><p>This work builds a dedicated SWM atlas from whole-brain tractography and groups its pathways by the functional networks they connect.</p></div>
+      <ul class="contribution-list">
+        <li><strong>Joint identification.</strong> Geometric and positional criteria are combined with a neural classifier to select plausible SWM clusters.</li>
+        <li><strong>Two network scales.</strong> Hierarchical merging produces atlas versions for the Yeo 7- and 17-network schemes.</li>
+        <li><strong>Complementary annotations.</strong> Meta-analytic associations and a structure-function uncertainty index support interpretation.</li>
+      </ul>
+    </div>
+  </section>
+  <section class="content-section" id="method" aria-labelledby="method-title">
+    <p class="section-label">02 / Method</p>
+    <h2 id="method-title">Identify, merge and annotate</h2>
+    <p class="section-intro">The framework starts from high-resolution whole-brain tractography, identifies superficial pathways, then examines their network organization and structural-functional coherence.</p>
+    <figure class="paper-figure source-width">
+      <a href="{{ '/images/swm-atlas/figure-1-pipeline.webp' | relative_url }}" target="_blank" rel="noopener" aria-label="Open Figure 1"><img src="{{ '/images/swm-atlas/figure-1-pipeline.webp' | relative_url }}" width="740" height="494" alt="Three pipeline stages: whole-brain tractography and clustering, joint SWM identification with hierarchical merging, and TW-dFC-based uncertainty analysis." loading="lazy"></a>
+      <figcaption><span>Fig. 1 · Atlas construction and characterization</span> (A) Population tractography and clustering. (B) SWM identification and merging. (C) Tract-weighted dynamic functional connectivity (TW-dFC) and independent component analysis.</figcaption>
+    </figure>
+    <ol class="method-steps">
+      <li><span>01</span><h3>Reconstruct</h3><p>Combine deterministic and probabilistic tractography from HCP 7T diffusion MRI and organize streamlines into fine-grained clusters.</p></li>
+      <li><span>02</span><h3>Select &amp; merge</h3><p>Combine geometry-based selection with a classifier trained on expert-informed SWM labels. Merge geometrically similar clusters using hierarchical clustering.</p></li>
+      <li><span>03</span><h3>Characterize</h3><p>Use network labels, Neurosynth annotations and TW-dFC from corresponding HCP 3T resting-state fMRI to describe the resulting atlas.</p></li>
+    </ol>
+  </section>
+  <section class="content-section" id="results" aria-labelledby="results-title">
+    <p class="section-label">03 / Results</p>
+    <h2 id="results-title">A finer map with two levels of organization</h2>
+    <h3 class="result-title">From thousands of candidates to a compact atlas</h3>
+    <p>Hierarchical merging reduces 1,719 identified SWM clusters to 643 under Yeo 7, and 4,189 to 1,403 under Yeo 17. Both versions contain connections within and between cortical networks.</p>
+    <figure class="paper-figure source-width">
+      <a href="{{ '/images/swm-atlas/figure-3-merging.webp' | relative_url }}" target="_blank" rel="noopener" aria-label="Open Figure 3"><img src="{{ '/images/swm-atlas/figure-3-merging.webp' | relative_url }}" width="738" height="420" alt="Hierarchical merging results: the initial cluster-count rule, a dendrogram, an elbow-based distance threshold and cluster counts before and after merging." loading="lazy"></a>
+      <figcaption><span>Fig. 3 · Hierarchical merging</span> The original figure shows the clustering rule, merge hierarchy, threshold selection and final cluster counts.</figcaption>
+    </figure>
+    <h3 class="result-title">A descriptive view of structure-function coherence</h3>
+    <p>TW-dFC and independent component analysis provide an uncertainty index for each cluster. The paper compares a strict single-component rule with a relaxed rule allowing two components; their distributions differ, while the two atlas versions show similar overall patterns.</p>
+    <figure class="paper-figure source-width">
+      <a href="{{ '/images/swm-atlas/figure-5-uncertainty.webp' | relative_url }}" target="_blank" rel="noopener" aria-label="Open Figure 5"><img src="{{ '/images/swm-atlas/figure-5-uncertainty.webp' | relative_url }}" width="738" height="415" alt="TW-dFC independent components, maps of cluster uncertainty, component-number selection and uncertainty distributions under strict and relaxed rules for both network schemes." loading="lazy"></a>
+      <figcaption><span>Fig. 5 · Structural-functional uncertainty</span> Maps and distributions summarize the paper's two annotation rules. The index is a descriptive measure of coherence under this decomposition.</figcaption>
+    </figure>
+    <p>The study also compares SWM track-density patterns with two independent high-quality diffusion MRI datasets. Within-cohort correspondence, external image-pattern similarity and functional annotations provide complementary views of the resource.</p>
+    <aside class="scope-note"><h4>Interpreting the resource</h4><p>This is a tractography-derived atlas. Its functional annotations are descriptive, and its transfer to other acquisition settings or populations requires dataset-specific validation.</p></aside>
+  </section>
+  <section class="content-section" id="resources" aria-labelledby="resources-title">
+    <p class="section-label">04 / Resources</p><h2 id="resources-title">Explore the atlas and its construction</h2>
+    <div class="resource-grid">
+      <a class="resource-card" href="https://doi.org/10.1016/j.isci.2026.116671" target="_blank" rel="noopener"><span>01 / Publication</span><h3>Read the full study ↗</h3><p>Methods, figures, quantitative evaluation and supplementary analyses.</p></a>
+      <a class="resource-card" href="https://doi.org/10.57760/sciencedb.28793" target="_blank" rel="noopener"><span>02 / Data</span><h3>SWM atlas dataset ↗</h3><p>Tractograms, cluster labels and correspondences between the Yeo 7- and 17-network atlas versions.</p></a>
+      <a class="resource-card" href="https://github.com/mushroomer1823/swm_atlas" target="_blank" rel="noopener"><span>03 / Code</span><h3>Processing pipeline ↗</h3><p>SWM identification, hierarchical merging, ICA and supporting analyses.</p></a>
+    </div>
+    <p class="data-note">The underlying whole-brain atlas is described in our <a href="{{ '/projects/connectomic-cluster/' | relative_url }}">NeuroImage project</a>. Subject-level clusters before hierarchical merging are available from the lead contact on request.</p>
+  </section>
+  <section class="content-section citation-section" id="citation" aria-labelledby="citation-title">
+    <p class="section-label">Citation</p><h2 id="citation-title">Cite this work</h2>
+    <p>He, Y., Xie, Y., Yip, H., Hong, Y., &amp; Wu, Y. (2026). A high-resolution functional network-organized atlas of human superficial white matter from ultra-high-field diffusion MRI. <em>iScience, 29</em>(7), 116671.</p>
+    <details><summary>BibTeX</summary><pre><code>@article{he2026swmatlas,
+  title = {A high-resolution functional network-organized atlas of human superficial white matter from ultra-high-field diffusion MRI},
+  author = {He, Yifei and Xie, Yu and Yip, Hiuying and Hong, Yoonmi and Wu, Ye},
+  journal = {iScience},
+  volume = {29},
+  number = {7},
+  pages = {116671},
+  year = {2026},
+  doi = {10.1016/j.isci.2026.116671}
+}</code></pre></details>
+    <a class="citation-download" href="{{ '/files/swm-atlas/citation-GPT.bib' | relative_url }}" download>Download citation (.bib)</a>
+  </section>
+</div>

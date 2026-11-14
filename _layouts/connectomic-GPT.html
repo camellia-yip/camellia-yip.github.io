@@ -10,7 +10,7 @@
   <meta property="og:title" content="{{ page.title | escape }}">
   <meta property="og:description" content="{{ page.description | escape }}">
   <meta property="og:type" content="article">
-  <meta property="og:image" content="{{ '/images/connectomic-cluster/figure-3-atlas.webp' | absolute_url }}">
+  <meta property="og:image" content="{{ page.project_image | default: '/images/connectomic-cluster/figure-3-atlas.webp' | absolute_url }}">
   <link rel="icon" href="{{ '/images/favicon-32x32.png' | relative_url }}">
   <link rel="stylesheet" href="{{ '/assets/css/connectomic-project-GPT.css' | relative_url }}">
 </head>
@@ -28,8 +28,8 @@
   </header>
   <main id="main">{{ content }}</main>
   <footer class="site-footer">
-    <p>Figures 1, 3, 5 and 6 reproduced without content changes from Yip et al., <a href="https://doi.org/10.1016/j.neuroimage.2026.121704">NeuroImage 326 (2026), 121704</a>.</p>
-    <p>© 2026 The Authors. Figures licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>.</p>
+    <p>{{ page.figure_numbers | default: 'Figures 1, 3, 5 and 6' }} reproduced without content changes from {{ page.paper_authors | default: 'Yip et al.' }}, <a href="{{ page.paper_doi | default: 'https://doi.org/10.1016/j.neuroimage.2026.121704' }}">{{ page.paper_reference | default: 'NeuroImage 326 (2026), 121704' }}</a>.</p>
+    <p>© {{ page.copyright_year | default: 2026 }} The Authors. Figures licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>.</p>
     <a href="{{ '/publications/' | relative_url }}">Back to all publications</a>
   </footer>
 </body>

@@ -12,7 +12,7 @@ author_profile: true
 **A high-resolution functional network-organized atlas of human superficial white matter from ultra-high-field diffusion MRI**<br>
 Yifei He, Yu Xie, **Hiuying Yip**, Yoonmi Hong, Ye Wu.<br>
 *iScience*, 29(7), 116671, 2026.<br>
-[Paper](https://doi.org/10.1016/j.isci.2026.116671)
+[Paper](https://doi.org/10.1016/j.isci.2026.116671) · <a href="{{ '/projects/swm-atlas/' | relative_url }}" target="_self">Project Page</a>
 
 **Detailed connectomic cluster resource for white matter mapping from ultra-high-field diffusion MRI**<br>
 **Hiuying Yip**<sup>&#42;</sup>, Yifei He<sup>&#42;</sup>, Yu Xie, Fan Zhang, Ye Wu.<br>
@@ -22,7 +22,7 @@ Yifei He, Yu Xie, **Hiuying Yip**, Yoonmi Hong, Ye Wu.<br>
 **Heterogeneity in brain morphology and psychological, cognitive, and contextual factors of gender identity**<br>
 **Hiuying Yip**, Yifei He, Yoonmi Hong, Jiaolong Qin, Fan Zhang, Ye Wu.<br>
 *Brain-X*, 3(3), e70037, 2025.<br>
-[Paper](https://doi.org/10.1002/brx2.70037)
+[Paper](https://doi.org/10.1002/brx2.70037) · <a href="{{ '/projects/gender-identity/' | relative_url }}" target="_self">Project Page</a>
 
 <sup>&#42;</sup> Equal contribution.
 
